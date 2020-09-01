@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 
 class ToyCard extends Component {
@@ -11,8 +12,8 @@ class ToyCard extends Component {
          <h2>{this.props.toy.name}</h2>
         <img src={this.props.toy.image} alt={this.props.toy.name} className="toy-avatar" />
         <p>{this.props.toy.likes} Likes </p>
-        <button className="like-btn">Like {'<3'}</button>
-        <button onClick={()=>{this.props.deleteHandler(this.props.toy.id)}}className="del-btn">Donate to GoodWill</button>
+        <button onClick={()=>{this.props.likeHandler(this.props.toy)}}className="like-btn">Like {'<3'}</button>
+        <button onClick={()=>{this.props.deleteHandler(this.props.toy)}}className="del-btn">Donate to GoodWill</button>
       </div>
     );
   }
